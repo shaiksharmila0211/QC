@@ -1,0 +1,125 @@
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Inter,system-ui,sans-serif;
+background:radial-gradient(circle at top,#1a1f3c,#05060f 60%);
+color:#fff;
+display:flex;
+height:100vh;
+overflow:hidden
+}
+.sidebar{
+width:240px;
+background:linear-gradient(180deg,#0f1430,#080a18);
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:14px
+}
+.logo{
+font-weight:800;
+font-size:20px;
+color:#ffcc4d
+}
+.nav a{
+display:flex;
+align-items:center;
+gap:10px;
+padding:12px 14px;
+border-radius:10px;
+color:#cfd3ff;
+text-decoration:none;
+font-weight:500
+}
+.nav a.active{
+background:#1c214a;
+color:#ffcc4d
+}
+.auth button{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:none;
+font-weight:600;
+cursor:pointer
+}
+.auth .register{
+background:linear-gradient(135deg,#ff9f1c,#ffcc4d);
+color:#000
+}
+.main{
+flex:1;
+padding:40px 60px;
+overflow-y:auto
+}
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:80px
+}
+.status{
+background:#0e4025;
+color:#5dff9b;
+padding:8px 14px;
+border-radius:20px;
+font-size:14px
+}
+.hero{
+max-width:900px
+}
+.hero h1{
+font-size:56px;
+line-height:1.1;
+margin:0 0 20px
+}
+.hero h1 span{
+background:linear-gradient(90deg,#ffcc4d,#ff8fa3);
+-webkit-background-clip:text;
+color:transparent
+}
+.hero p{
+color:#cfd3ff;
+max-width:700px;
+font-size:18px
+}
+.actions{
+margin-top:30px;
+display:flex;
+gap:16px
+}
+.actions button{
+padding:14px 22px;
+border-radius:14px;
+border:1px solid #2a2f66;
+background:#11153a;
+color:#fff;
+font-weight:600;
+cursor:pointer
+}
+.actions .primary{
+background:linear-gradient(135deg,#ff9f1c,#ffcc4d);
+color:#000;
+border:none
+}
+.cards{
+margin-top:90px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px
+}
+.card{
+padding:26px;
+border-radius:20px;
+background:linear-gradient(160deg,#151a3d,#0a0d22);
+min-height:180px
+}
+.card h3{
+margin:0 0 10px;
+font-size:20px
+}
+.card p{
+margin:0;
+color:#cfd3ff;
+font-size:15px
+}
