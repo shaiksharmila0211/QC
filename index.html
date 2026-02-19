@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventria</title>
+
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp11661712.jpg");
+            background-size: cover;        
+            background-repeat: no-repeat; 
+            background-position: center;
+            margin:0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin-left: 220px; 
+            padding: 20px;
+        }
+        header {
+            background-color: rgb(12, 1, 31);
+            color: rgb(240, 208, 28);
+            padding: 20px;
+            position: relative;
+            margin-right: 50px;
+            
+        }
+        
+        .buttons button
+        {
+              color: #f2f2f2;
+              border:2px #f2f2f2;
+              margin-left: 10px;
+              background-color: rgb(12, 1, 31);
+              cursor :pointer;
+              background-color: #070437;
+              float: right;
+              border-radius: 50;
+              padding :10px 30px ;
+              border :2px solid #f2f2f2;
+              border-radius: 25px !important;
+              margin-top: -20px;
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        .logo {
+            position: fixed;
+            right: 20px;
+            top: 10px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .container {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 0px;
+            width: 100%;
+        }
+
+        .container1 {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 0px;
+            width: 100%;
+        }
+        .container2 {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 0px;
+            width: 100%;
+        }
+        .container4 {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr); 
+            gap: 0px;
+            width: 100%;
+        }
+    
+
+        .box {
+            margin-left: 20px;
+            margin-bottom: 100px;
+            margin-right: 20px;
+            border-color: bisque;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(150, 233, 233, 0.94);
+        }
+        .box1 {
+            margin-top: 30px;
+            margin-bottom: 80px;
+            margin-left: 20px;
+            margin-right: 20px;
+            justify-content: center;
+            display :flex;
+            border-color: bisque;
+            padding: 2px;
+            text-align: center;
+            color: #f2f2f2;
+            border-radius: 150px;
+            box-shadow: 0 0 10px rgba(212, 220, 191, 0.94);
+            gap: 20px;
+        }
+        .box1 > div
+        {
+            width: 220px;
+            padding: 12px 25px;
+            border-radius:40px ;
+
+        }
+        .box h2 {
+            color: #a4a7a9;
+            margin-bottom: 10px;
+        }
+        .box h4 {
+            color: #bcbebf;
+        }
+      
+        p
+        {
+          color: rgb(214, 200, 182);
+        }
+        h2
+        {
+            color: darkgoldenrod;
+            text-align: center ;
+
+        }
+        
+        h6{
+            text-align: center ;
+            color: #f2f2f2;
+        }
+        h1
+        {
+            text-align: center ;
+            color: #f2f2f2;
+        }
+        p1
+        {
+            color:antiquewhite ;
+            text-align: center;
+        }
+        h3
+        {
+        text-align: left;
+        color: #f2f2f2;
+        }
+        .sidebar
+         {
+         width: 200px;
+         height: 100vh;
+        background-color: #07023e;
+         padding: 20px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        }
+        .sidebar button 
+        {
+        align-items: center;
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        background-color:#1e1b3d;
+        border:2px;
+        color: white;
+        cursor: pointer;
+        border-radius: 25px !important;
+        }
+        .beloww h1 {
+        text-align: center;
+        color: darkgoldenrod;
+        text-decoration-color: bisque;
+        }
+        .beloww p{
+        text-align: center;
+        }
+        .container1 button
+        {
+              color: #f2f2f2;
+              border:1px #f2f2f2;
+              background-color: rgb(12, 1, 31);
+              cursor :pointer;
+              background-color: #070437;
+              float: right;
+              border-radius: 50;
+              border :2px solid #331988;
+              border-radius: 25px !important;
+              margin-top: -15px;
+              margin-left: 15px;
+              margin-right: 10px;
+              background: #2b1545;
+        }
+         .container2 button
+        {
+              color: #f2f2f2;
+              border:1px #f2f2f2;
+              background-color: rgb(12, 1, 31);
+              cursor :pointer;
+              background-color: #070437;
+              float: right;
+              border-radius: 50;
+              border :2px solid #331988;
+              border-radius: 25px !important;
+              background: #084354;
+              gap:1px ;
+              float: left;
+              margin-left: 10px;
+        }
+         .container4 button
+        {
+              color: #d2c6c6;
+              border:1px #f2f2f2;
+              background-color: rgb(12, 1, 31);
+              cursor :pointer;
+              background-color: #070437;
+              float: right;
+              border-radius: 50;
+              border :2px solid #17112c;
+              border-radius: 25px !important;
+              background: #060012;
+              gap:1px ;
+              margin-left: 10px;
+              margin-right: 45%;
+              padding: 20px;
+
+        }
+        .container4 h1
+        {
+            color: goldenrod;
+        }
+        .container4 p
+        {
+            text-align: center;
+        }
+
+
+        .footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 60px 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-box p,
+.footer-box li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-box a {
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: color 0.3s;
+}
+
+.footer-box a:hover {
+  color: #f59e0b;
+}
+
+/* Social Icons */
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+  background: #1e293b;
+  color: #fff;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  background: #f59e0b;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.subscribe-btn:hover {
+  background: #fbbf24;
+}
+
+.footer-box small {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+
+/* Bottom Footer */
+.footer-bottom {
+  border-top: 1px solid #091426;
+  margin-top: 40px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.footer-bottom a {
+  margin-left: 15px;
+  color: #94a3b8;
+}
+.box1 a{
+    color: bisque;
+}
+.buttons h1{
+    color: rgb(240, 208, 28);
+}
+
+
+        
+        
+        
+    </style>
+</head>
+
+<body>
+     <div class="sidebar">
+        <b><h1>⚡Eventaria</h1></b>
+        <a href="https://www.eventria.in/login"><button >Login</button></a>
+        <a href="https://www.eventria.in/register"><button><h2>Register</h2></button></a>
+        <a href="https://www.eventria.in/"><button>🏠home</button></a>
+        <a href="https://www.eventria.in/contact"><button>📞Contact</button></a>
+        <a href="https://www.eventria.in/leaderboard"><button>🥇Leaderboard</button></a>
+        
+        
+    </div>
+    <header>
+        <div class="buttons">
+        <b><h1>⚡Eventaria</h1></b>
+         <a href="https://www.eventria.in/help-center"><button> ❔</button></a>
+         <a href="https://www.eventria.in/login"><button> login</button></a>
+         <a href="https://www.eventria.in/register"><button> Get started</button></a>
+        </div>
+
+
+        <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/158/posts/41993/final_image/LightningBoltLogo0.jpg" alt="svec" class="logo">
+    </header>
+<h1>Transform Your Event With</h1><h2>Real-Time management</h2><h1>ENGAGEMENT</h1>
+<h6>Eventria revolutionizes event management with instant RSVPs, live feedback, and actionable insights – perfect for conferences, workshops, and social gatherings. <br> Explore the best of things to do in Hyderabad! From catching a show to dining at a popular restaurant, here are a few things that you definitely shouldn’t miss: 1. <br>You Should Take One Fascinating Old City Heritage Walk In Hyderabad To See All The Attractions 2. Spend One Adventurous Day With Thrilling Rides At Wonderla Amusement Park 3. Take A Walk...</h6>
+    <div class="container">
+        
+        <div class="box1">
+            <a href="https://www.eventria.in/browse">
+                <h4>
+               🔎browse event 
+            </h4></a>
+         </div>
+         <div class="box1">
+            <a href="https://www.eventria.in/register"><h4>
+               Get started free 
+            </h4></a>
+         </div>
+         <div class="box1">
+            <h4><a href="https://www.eventria.in/demo">view live demo </a></h4>
+         </div>
+         
+        <div class="box">
+            <h3><h1>📝<br><b>Real-Time RSVPs</h1></b></h3>
+            <p>
+                Watch as attendees confirm their participation <br>instantly with live updates
+            </p>
+        </div>
+
+        <div class="box">
+            <h3><h1>💬<br><b>Live Feedback</h1></b></h3>
+            <p>
+                Capture audience sentiment during your event<br> with emoji reactions and comments.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3><h1>📊<br><b>powerful Analytic</h1></b></h3>
+            <p>
+                Gain insights into attendee engagement and<br> feedback trends post-event.
+            </p>
+        </div>
+    </div>
+    <div class="beloww">
+    <h1>Why Eventria is the Future of Event Management</h1>
+    <p> Discover the comprehensive suite of features that make Eventria the most advanced B2B college event management platform<br>   <br></p>
+    </div>
+
+
+    <div class="container">
+        <div class="box">
+            <h3><h1>⚡<br><b>Real-Time Engagement</h1></b></h3>
+            <p>Live RSVPs, instant feedback, real-time chat, and dynamic leaderboards that keep your audience engaged throughout the event.</p>
+        </div>
+
+        <div class="box">
+            <h3><h1>📊<br><b>Advanced Analytic</h1></b></h3>
+            <p>
+            Comprehensive insights with engagement metrics, feedback analysis, attendance tracking, and custom reporting dashboards.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3><h1>🏆<br><b>Certificate Management</h1></b></h3>
+            <p>Automated certificate generation, QR code verification, template customization, and blockchain verification for authenticity. 
+           </p>
+        </div> 
+
+
+        <div class="box">
+            <h3><h1>👥<br><b>Social Networking</h1></b></h3>
+            <p>
+                Connect with attendees, share experiences, create profiles, and build lasting professional relationships through our social features.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3><h1>🎮<br><b>Gamification</h1></b></h3>
+            <p>
+                Points system, leaderboards, achievements, and interactive challenges that make events more engaging and memorable.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3><h1>📱<br><b>QR Code System</h1></b></h3>
+            <p>
+                Seamless check-ins, payment processing, certificate verification, and event access through advanced QR code technology.
+            </p>
+        </div> 
+    </div> 
+        
+        <div class="beloww">
+        <h1>Premium Services</h1>
+        <p> Professional-grade tools for college event management<br>   <br></p>
+        </div>
+    
+    <div class="container1">
+        <div class="box">
+            <h3><h1>🎨<br><b>Template Editor</h1></b></h3>
+            <p>Advanced drag-and-drop template editor with real-time preview, custom branding, and professional certificate designs.</p>
+            <button>Drag & Drop</button><button>Real-time Preview</button><button>Custom Branding</button>
+        </div>
+
+        <div class="box">
+            <h3><h1>👥<br><b>Team Recruitment</h1></b></h3>
+            <p>Find and join teams for events! Post recruitment needs or apply to join teams that are looking for members to participate in events together.</p>
+            <button>Team Formation</button><button>Member Matching</button><button>Event Teams</button>
+        </div>
+
+        <div class="box">
+            <h3><h1>📝<br><b>Smart Registration Forms</h1></b></h3>
+            <p>Advanced forms with conditional logic, file uploads, team management, auto-save drafts, and intelligent payment verification. </p>
+            <button>Smart Validation</button><button>Auto-Save Drafts</button><button>Team Management</button>
+        </div> 
+
+
+        <div class="box">
+            <h3><h1>📈<br><b>Analytics Dashboard</h1></b></h3>
+            <p>Comprehensive analytics with engagement metrics, attendance patterns, feedback trends, and custom reporting.</p>
+            <button>Engagement Metrics</button><button>Custom Reports</button><button>Real-time Data</button>
+        </div>
+    </div> 
+
+
+    <div class="beloww">
+        <h1>What Makes Us Diffrent</h1>
+        <p> Revolutionary features that set Eventria apart from traditional event management platforms<br>   <br></p>
+    </div>
+
+
+    <div class="container2">
+        <div class="box">
+            <h3><h1>🎓<br><b>B2B College Focus</h1></b></h3>
+            <p>Built specifically for college communities and intercollege events with dedicated features for academic institutions</p>
+            <div><button>CollegeNetworks</button><button>Academic</button></div>
+        </div>
+
+        <div class="box">
+            <h3><h1>🛡️<br><b>Trust-Based System</h1></b></h3>
+            <p>Advanced RBAC with trust scores and reputation management ensuring secure and reliable event operations</p>
+            <button>Trust Scores</button><button>Reputation</button>
+        </div>
+
+        <div class="box">
+            <h3><h1>⚡<br><b>Scalable Architecture</h1></b></h3>
+            <p>Designed to grow from 3 colleges to hundreds seamlessly with enterprise-grade infrastructure and performance</p>
+            <button>Cloud Native</button><button>High Performance</button>
+        </div> 
+
+
+        <div class="box">
+            <h3><h1>🤖<br><b>Smart Payment Verification</h1></b></h3>
+            <p>Advanced computer vision automatically verifies payment screenshots with 95%+ accuracy across all UPI apps</p>
+            <button>Auto-Verify</button><button>95%+ Accuracy</button>
+        </div>
+    </div> 
+
+
+     <div class="beloww">
+        <h1> What Our Users Say</h1>
+        <p> Hear from event organizers who've transformed their events with Eventria<br>   <br></p>
+    </div>    
+
+
+     <div class="container">
+        <div class="box">
+            <h3><h1><b>Yashwanth Reddy</b></h1></h3>
+            <p1>Faculty Coordinator, Cuest, AIT"Eventria revolutionized our hackathon management.<br>The real-time feedback and analytics helped us understand participant 
+                engagement like never before. The certificate system is a game-changer!" <b><h3>★★★★★</b></h3></p1>
+        </div>
+
+        <div class="box">
+            <h3><h1><b>Harshit Aditya</b></h1></h3>
+            <p1>
+            Event Coordinator, CUEST, AIT"The social networking features have created an amazing community around our events. Students are still connecting months after the 
+            event ended. The gamification keeps everyone engaged!"<b><h3>★★★★★</b></h3></p1>
+        </div>
+            
+        
+        <div class="box">
+            <h3><h1><b>Indrajit Sarkar</b></h1></h3>
+            <p1>Event Manager, Cuest, AIT"The QR code system and automated check-ins saved us hours of manual work. The template editor is incredibly powerful - we can create 
+                professional certificates in minutes!"<b><h3>★★★★★</b></h3></p1>
+           </p>
+        </div> 
+    </div> 
+
+
+    <div class="container4">
+        <div class="box">
+        <h1> Ready to Transform Your Events?</h1><br>
+        <p>Join thousands of event organizers who trust Eventria for their most important events. Start your journey today.<br>   <br></p>
+
+            <button><b>Yashwanth Reddy</b></button>
+        
+    </div>
+    </div>
+
+    <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2>⚡ Eventria</h2>
+      <p>
+        Revolutionizing event management with real-time engagement tools for
+        unforgettable experiences.
+      </p>
+
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@Eventriaa">X</a>
+        <a href="https://www.facebook.com/people/Eventria/61583604980842/">F</a>
+        <a href="https://www.instagram.com/eventriaa/">I</a>
+        <a href="https://www.linkedin.com/in/eventria-samuel-tan-63362221b/">L</a>
+      </div>
+    </div>
+
+    
+    <div class="footer-box">
+      <h3><u>Quick Links</u></h3>
+      <ul>
+        <li><a href="https://www.eventria.in/">Home</a></li>
+        <li><a href="https://www.eventria.in/blog">Blog</a></li>
+        <li><a href="https://www.eventria.in/features">Features</a></li>
+        <li><a href="https://www.eventria.in/about">About Us</a></li>
+        <li><a href="https://www.eventria.in/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-box">
+      <h3><u>Resources</u></h3>
+      <ul>
+        <li><a href="https://www.eventria.in/help-center">Help Center</a></li>
+        <li><a href="https://www.eventria.in/feedback">Feedback</a></li>
+        <li><a href="https://www.eventria.in/terms">Terms of Service</a></li>
+        <li><a href="https://www.eventria.in/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-box">
+      <h3><u>Stay Updated</u></h3>
+      <p>Sign in to subscribe to our newsletter for event tips and updates.</p>
+        <a href="https://www.eventria.in/login"><button class="subscribe-btn">Sign in to Subscribe</button></a>
+      <small>We respect your privacy. No spam, ever.</small>
+    </div>
+
+  </div>
+
+  
+  <div class="footer-bottom">
+    <p>© 2026 Eventria. All rights reserved.</p>
+    <div>
+      <a href="https://www.eventria.in/terms">Terms</a>
+      <a href="https://www.eventria.in/privacy">Privacy</a>
+      <a href="https://www.eventria.in/cookies">Cookies</a>
+    </div>
+  </div>
+</footer>
+    
